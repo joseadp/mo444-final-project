@@ -8,7 +8,7 @@ def get_voting_classifier():
     forest = RandomForestClassifier(n_estimators = 100, n_jobs=3)
     decision_tree = DecisionTreeClassifier(max_depth=15)
     knn = KNeighborsClassifier(n_neighbors=15)
-    svm = SVC(kernel='rbf', probability=True)
+    svm = SVC(gamma=0.0001, C = 100)
     ada = AdaBoostClassifier(n_estimators = 500, learning_rate=0.1)
 
 
